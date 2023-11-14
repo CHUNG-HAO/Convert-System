@@ -1,0 +1,40 @@
+<h2>批量轉換 PPT 檔案</h2>
+
+<form id="convert-form">
+  <label for="source-path">查詢文件路徑:</label><br>
+  <button type="button" id="source-path">選擇文件夾</button><br><br>
+  <label for="destination-path">目的文件夾路徑:</label><br>
+  <button type="button" id="destination-path">選擇文件夾</button><br><br>
+  <input type="submit" value="開始轉換">
+</form>
+
+<div id="output"></div>
+
+<script>
+document.querySelector('#source-path').addEventListener('click', async function(e) {
+  const dirHandle = await window.showDirectoryPicker();
+  this.dataset.path = dirHandle.name;
+});
+
+document.querySelector('#destination-path').addEventListener('click', async function(e) {
+  const dirHandle = await window.showDirectoryPicker();
+  this.dataset.path = dirHandle.name;
+});
+
+document.querySelector('#convert-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var formData = new FormData();
+  formData.append('source-path', document.querySelector('#source-path').dataset.path);
+  formData.append('destination-path', document.querySelector('#destination-path').dataset.path);
+
+  fetch('/convert', { method: 'POST', body: formData })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('output').innerHTML = `<a href="${data.url}">下載 PDF</a>`;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+});
+</script>

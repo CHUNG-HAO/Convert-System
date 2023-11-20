@@ -9,6 +9,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.static('public'));  
+app.use(express.json());  // 解析 JSON 請求
+app.use(express.urlencoded({ extended: true }));  // 解析 URL 編碼的請求
+
+// ...
+app.use(express.static('public'));  
 
 app.post('/convert', upload.none(), (req, res) => {
   const pptFolderPath = req.body['source-path'];

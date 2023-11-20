@@ -1,13 +1,20 @@
-FROM node:latest
+# 使用官方 Node.js 14 影像作為基底
+FROM node:14
 
+# 設定工作目錄
 WORKDIR /usr/src/app
 
-COPY package.json /usr/src/app/
+# 複製 package.json 和 package-lock.json
+COPY package*.json ./
 
-RUN yarn install && yarn cache clean
+# 安裝應用程式的依賴項
+RUN npm install
 
-COPY . /usr/src/app
+# 複製應用程式的源碼
+COPY . .
 
+# 開放容器的 8080 連接埠
 EXPOSE 8080
 
-CMD [ "yarn", "start" ]
+# 啟動應用程式
+CMD [ "node", "server.js" ]

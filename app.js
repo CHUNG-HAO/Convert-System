@@ -12,8 +12,6 @@ app.use(express.static('public'));
 app.use(express.json());  // 解析 JSON 請求
 app.use(express.urlencoded({ extended: true }));  // 解析 URL 編碼的請求
 
-// ...
-app.use(express.static('public'));  
 
 app.post('/convert', upload.none(), (req, res) => {
   const pptFolderPath = req.body['source-path'];
@@ -34,12 +32,11 @@ app.post('/convert', upload.none(), (req, res) => {
       }).catch(function(error) {
         console.error(`Error converting ${pptFile} to PDF: ${error}`);
       });
-    }
-  });
-
-  res.json({ message: 'Conversion started.' });
+  }});
+  res.json({ message: 'OK.' });
 });
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
+

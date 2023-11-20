@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>PPT to PDF Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="PPTtoPDF.css">
+</head>
+<body>
+
+  <header>
+    <h1>PPT to PDF Converter</h1>
+  </header>
+
+  <form action="/convert" method="post">
+    <label for="source-path">Start Path（chose file）:</label><br>
+    <input type="text" id="source-path" name="source-path"><br>
+    <label for="destination-path">Target Path（chose file）:</label><br>
+    <input type="text" id="destination-path" name="destination-path" ><br>
+    <input type="submit" value="Convert">
+  </form>
+
+  <footer>
+    <p>Created by <a href="https://github.com/CHUNG-HAO" target="_blank">Chung Hong Hao</a></p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

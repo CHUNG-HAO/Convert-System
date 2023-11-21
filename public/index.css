@@ -3,15 +3,9 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Comic Sans MS', cursive, sans-serif; 
+    border: none;
 }
 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-}
 
 .btn-primary {
   background-color: #3d5ba6 !important;

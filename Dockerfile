@@ -1,20 +1,19 @@
-# 使用官方 Node.js 14 影像作為基底
+
 FROM node:14
 
-# 設定工作目錄
 WORKDIR /usr/src/app
 
-# 複製 package.json 和 package-lock.json
 COPY package*.json ./
 
-# 安裝應用程式的依賴項
-RUN npm install
+RUN npm install axios@1.6.0
+RUN npm install convertapi@1.13.0
+RUN npm install express@4.18.2
+RUN npm install multer@1.4.5-lts.1
+RUN npm install mysql@2.18.1
 
-# 複製應用程式的源碼
+
 COPY . .
 
-# 開放容器的 8080 連接埠
-EXPOSE 8080
+EXPOSE 3000
 
-# 啟動應用程式
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]

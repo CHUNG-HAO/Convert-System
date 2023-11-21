@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>convert-tools</title>
-    <!-- 引入 Bootstrap CSS -->
+    <title>Convert-tools</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <!-- 使用 Bootstrap 的 navbar 元件來創建一個導航欄 -->
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Convert-tools</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- sign in/up -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="sign.html">sign in/up</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3</a>
-                    </li>
                 </ul>
             </div>
+            
         </nav>
     </header>
+
     <!-- 主要內容 -->
     <main>
         <div class="container mt-2">
             <div class="row justify-content-center">
+
+                <!-- PPT to PDF -->
+
                 <div class="col-lg-4">
                     <div class="card">
                         <img src="img/cute.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">PPT to PDF Converter</h5>
-                            <p class="card-text">Click the button below to convert PPT to PDF.</p>
+                            <p class="card-text">輸入資料夾位置，系統將自動搜尋該檔案夾位置中的PPT，再填入欲想儲存之位置，系統自動將PDF儲存至該位置</p>
                             <a href="PPTtoPDF.html" class="btn btn-primary">Go to Converter</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- WORD to PDF -->
 
                 <div class="col-lg-4">
                     <div class="card">
                         <img src="img/cute.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">WORD to PDF Converter</h5>
-                            <p class="card-text">Click the button below to convert WORD to PDF.</p>
-                            <a href="" class="btn btn-primary">Go to Converter</a>
+                            <p class="card-text">輸入資料夾位置，系統將自動搜尋該檔案夾位置中的WORD，再填入欲想儲存之位置，系統自動將PDF儲存至該位置</p>
+                            <a href="WORDtoPDF.html" class="btn btn-primary">Go to Converter</a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
@@ -63,37 +66,29 @@
     <br>
 
     <footer class="footer">
-        <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
-        </div>
+
+        <!--------------- 超連結 --------------->
+
         <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-instagram"></ion-icon>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/CHUNG-HAO/Convert-System">
+              <ion-icon name="logo-github"></ion-icon>
             </a></li>
         </ul>
+
+        <!--------------- Menu --------------
+
         <ul class="menu">
           <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
           <li class="menu__item"><a class="menu__link" href="#">About</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-    
         </ul>
-        <p>&copy;2023 CHUNG-HAO | All Rights Reserved</p>
-      </footer>
 
+        -->
+        <p>&copy;2023 CHUNG-HAO | All Rights Reserved</p>
+        <p>"A tool for converting files to PDF that features 'batch conversion', 'open-source', 'fast conversion', and 'free of charge'."</p>
+
+      </footer>
 
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

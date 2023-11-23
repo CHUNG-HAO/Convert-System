@@ -15,17 +15,7 @@
   background-color: #add8e6 !important;
 }
 
-.footer {
-  position: relative;
-  width: 100%;
-  background: #add8e6;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+.footer { position: relative; width: 100%; background: #add8e6; min-height: 100px; padding: 20px 50px; display: flex; justify-content: center; align-items: center; flex-direction: column; }
 
 .social-icon,
 .menu {

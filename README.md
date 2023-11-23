@@ -7,4 +7,4 @@
 API: RESTful API
 
 
-> API token : https://www.convertapi.com
+> API token : https://www.convertapi.com （為了不收費, 每轉換250次扣打, 要換一個gmail註冊API）

@@ -38,7 +38,6 @@ app.post('/convert', upload.none(), (req, res) => {
   pptFiles.forEach((pptFile) => {
     if (path.extname(pptFile).toLowerCase() === '.ppt' || path.extname(pptFile).toLowerCase() === '.pptx') {
       const pptFilePath = path.join(pptFolderPath, pptFile);
-      const pdfFilePath = path.join(pdfFolderPath, `${path.basename(pptFile, path.extname(pptFile))}.pdf`);
 
       convertapi.convert('pdf', { File: pptFilePath }, 'pptx').then(function(result) {
         result.saveFiles(pdfFolderPath);
@@ -64,7 +63,6 @@ app.post('/convertWord', upload.none(), (req, res) => {
   wordFiles.forEach((wordFile) => {
     if (path.extname(wordFile).toLowerCase() === '.doc' || path.extname(wordFile).toLowerCase() === '.docx') {
       const wordFilePath = path.join(wordFolderPath, wordFile);
-      const pdfFilePath = path.join(pdfFolderPath, `${path.basename(wordFile, path.extname(wordFile))}.pdf`);
 
       convertapi.convert('pdf', { File: wordFilePath }, 'docx').then(function(result) {
         result.saveFiles(pdfFolderPath);
@@ -108,5 +106,5 @@ app.post('/signin', function(req, res) {
 
 
     app.listen(PORT, () => {
-      console.log(`server started on port ${PORT}`);
+      console.log(`server started on port http://localhost:${PORT}`);
     });

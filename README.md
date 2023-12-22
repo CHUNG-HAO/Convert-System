@@ -14,6 +14,6 @@ API: RESTful API
 <img src="https://github.com/CHUNG-HAO/Convert-System/assets/67829896/654c3031-0a9d-4f92-b8fa-9bc564137101" width="800" height="600">
 
 ## how to use?
+https://8c9d-61-216-112-153.ngrok-free.app/
 
-https://convert-tools.onrender.com
-久沒使用需要喚醒
+> 如果沒有辦法打開一定是伺服器死亡

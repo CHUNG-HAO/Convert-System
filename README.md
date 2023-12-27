@@ -16,4 +16,4 @@ API: RESTful API
 ## how to use?
 https://8c9d-61-216-112-153.ngrok-free.app/
 
-> 如果沒有辦法打開一定是伺服器死亡
+> 如果沒有辦法打開一定是代理伺服器死亡

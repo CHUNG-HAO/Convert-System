@@ -8,21 +8,9 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-/*
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
-  database: "yourdatabase"
-});
-*/
 
 app.use(express.static('public'));
-// 解析 JSON 請求  
 app.use(express.json()); 
-// 解析 URL 編碼的請求
 app.use(express.urlencoded({ extended: true })); 
 
     /*------------PPT to PDF------------*/
@@ -73,36 +61,6 @@ app.post('/convertWord', upload.none(), (req, res) => {
   }});
   res.json({ message: 'OK.' });
 });
-
-    /*------------ Databsae ------------
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected to MySQL!");
-});
-
-app.post('/signin', function(req, res) {
-  var email = req.body.email;
-  var password = req.body.password;
-
-  con.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], function(err, result) {
-    if (err) throw err;
-
-    if (result.length > 0) {
-      req.session.loggedin = true;
-      req.session.email = email;
-      res.redirect('/home');
-    } else {
-      res.send('Incorrect Email and/or Password!');
-    }            
-    res.end();
-  });
-});
-
-*/
-
-    /*------------ 檢查是否有註冊並登入 ------------*/
-
 
 
     app.listen(PORT, () => {

@@ -17,6 +17,3 @@ API: RESTful API
 ```docker
 docker run -p 3000:3000 convert-system
 ```
-https://8c9d-61-216-112-153.ngrok-free.app/
-
-> 如果沒有辦法打開一定是代理伺服器死亡
